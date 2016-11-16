@@ -5,15 +5,10 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 12:39:40 2016 Nathan Lebon
-** Last update Tue Nov 15 12:45:48 2016 Nathan Lebon
+** Last update Wed Nov 16 11:16:39 2016 Nathan Lebon
 */
 
 #include "my.h"
-
-void	my_putchar(char c)
-{
-  write(1, &c, 1);
-}
 
 void    print_int(int i)
 {

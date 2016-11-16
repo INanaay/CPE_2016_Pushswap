@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Tue Nov 15 18:01:41 2016 Nathan Lebon
+** Last update Wed Nov 16 12:49:55 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -97,17 +97,4 @@ void		go_through(t_dlist *list)
 	  i = i + 1;
 	}
     }
-}
-
-int	main()
-{
-  t_dlist *list;
-
-  list = create_list();
-  add_end(list, 4);
-  add_end(list, 5);
-  add_end(list, 2);
-  elem_swap(list, 1, 2);
-  // printf("%i", list->len);
-   go_through(list);
 }

@@ -5,10 +5,11 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 10:48:22 2016 Nathan Lebon
-** Last update Wed Nov 16 11:02:52 2016 Nathan Lebon
+** Last update Wed Nov 16 11:10:21 2016 Nathan Lebon
 */
 
 #include "my.h"
+#include <unistd.h>
 
 void	my_putchar(char c)
 {
