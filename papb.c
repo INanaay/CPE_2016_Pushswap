@@ -5,12 +5,22 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 11:24:50 2016 Nathan Lebon
-** Last update Wed Nov 16 14:46:16 2016 Nathan Lebon
+** Last update Wed Nov 16 17:11:11 2016 Nathan Lebon
 */
 
 #include "my.h"
 #include <string.h>
 #include <stdlib.h>
+
+t_dlist		*reset_index(t_node *node)
+{
+  node = node->next;
+  while (node != NULL)
+    {
+      node->index = node->index - 1;
+      node = node->next;
+    }
+}
 
 t_dlist		*remove_elem(t_dlist *list, int index)
 {
@@ -19,6 +29,7 @@ t_dlist		*remove_elem(t_dlist *list, int index)
   n = list->beg;
   while (n->index != index)
     n = n->next;
+  reset_index(n);
   if (n->next == NULL)
     {
       list->end = n->prev;
