@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 13:08:29 2016 Nathan Lebon
-** Last update Wed Nov 16 16:33:04 2016 Nathan Lebon
+** Last update Wed Nov 16 16:35:47 2016 Nathan Lebon
 */
 
 #include <string.h>
@@ -14,8 +14,8 @@
 void		sa(t_dlist *list)
 {
   if (list->len < 3)
-      return;
-      elem_swap(list, 1, 2);
+    return;
+  elem_swap(list, 1, 2);
 }
 
 void		sb(t_dlist *list)
