@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 13:08:29 2016 Nathan Lebon
-** Last update Wed Nov 16 11:02:03 2016 Nathan Lebon
+** Last update Wed Nov 16 16:33:04 2016 Nathan Lebon
 */
 
 #include <string.h>
@@ -13,18 +13,16 @@
 
 void		sa(t_dlist *list)
 {
-  t_node	*n;
-
-  if (n == NULL || n->next == NULL)
-    return;
-  elem_swap(list, 1, 2);
+  if (list->len < 3)
+      return;
+      elem_swap(list, 1, 2);
 }
 
-void        sb(t_dlist *list)
+void		sb(t_dlist *list)
 {
   t_node        *n;
 
-  if (n = NULL || n->next == NULL)
+  if (list->len < 3)
     return;
   elem_swap(list, 1, 2);
 }
@@ -51,11 +49,9 @@ t_dlist		*elem_swap(t_dlist *list, int i1, int i2)
   while (temp->index != i1)
       temp = temp->next;
   tempv = temp->val;
-  //printf("i1=%i, i2=%i\n", temp->val, tempv);
   temp2 = temp;
   while (temp->index != i2)
     temp = temp->next;
-  //printf("i1=%i, i2=%i", temp->val, tempv);
   temp2->val = temp->val;
   temp->val = tempv;
   return (list);

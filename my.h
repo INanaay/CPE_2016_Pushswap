@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:05:46 2016 Nathan Lebon
-** Last update Wed Nov 16 14:55:50 2016 Nathan Lebon
+** Last update Wed Nov 16 16:19:40 2016 Nathan Lebon
 */
 
 #ifndef MY_H_
@@ -34,5 +34,11 @@ t_dlist		*create_list();
 void		my_putstr(char *);
 t_dlist         *remove_elem(t_dlist *, int);
 void		*pa(t_dlist *, t_dlist *);
+t_dlist		*add_end(t_dlist *, int);
+t_dlist		*add_beg(t_dlist *, int);
+void		go_through(t_dlist *);
+void		sa(t_dlist *);
+void		sb(t_dlist *);
+int		my_getnbr(char *);
 
 #endif

@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Wed Nov 16 12:49:55 2016 Nathan Lebon
+** Last update Wed Nov 16 16:22:34 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -38,7 +38,7 @@ t_dlist		*add_end(t_dlist *list, int val)
       new->next = NULL;
       if (list->end == NULL)
 	{
-	  new->index = 0;
+	  new->index = 1;
 	  new->prev = NULL;
 	  list->beg = new;
 	  list->end = new;
@@ -66,12 +66,14 @@ t_dlist		*add_beg(t_dlist *list, int val)
       new->prev = NULL;
       if (list->end == NULL)
 	{
+	  new->index = 1;
 	  new->next = NULL;
 	  list->beg = new;
 	  list->end = new;
 	}
       else
 	{
+	  new->index = new->index + 1;
 	  list->beg->prev = new;
 	  new->next = list->beg;
 	  list->beg = new;
