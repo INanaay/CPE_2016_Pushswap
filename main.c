@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 12:50:03 2016 Nathan Lebon
-** Last update Wed Nov 16 18:17:20 2016 Nathan Lebon
+** Last update Mon Nov 21 13:16:56 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -25,8 +25,8 @@ t_dlist		*ini_list(int ac, char **av)
       add_end(la, my_getnbr(av[i]));
       i = i + 1;
     }
-  go_through(la);
-  ra(la);
+  sort(la, lb);
+  go_through(lb);
   go_through(la);
 }
 
@@ -38,13 +38,5 @@ int	main(int ac, char **av)
       my_putstr("temp message");
       return (0);
     }
-  
-  t_dlist	*list;
-  /*
-  list = create_list();
-  add_end(list, my_getnbr(av[1]));
-  add_end(list, my_getnbr(av[2]));
-  go_through(list);
-  */
   ini_list(ac, av);
 }

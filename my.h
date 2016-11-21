@@ -5,11 +5,16 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:05:46 2016 Nathan Lebon
-** Last update Wed Nov 16 16:19:40 2016 Nathan Lebon
+** Last update Mon Nov 21 10:28:54 2016 Nathan Lebon
 */
 
 #ifndef MY_H_
-#define MY_H_
+# define MY_H_
+
+# define LA1 la->beg->val
+# define LA2 la->beg->next->val
+# define LB1 lb->beg->val
+# define LB2 lb->beg->next->val
 
 typedef struct		s_node
 {
@@ -33,12 +38,18 @@ void		my_putchar(char);
 t_dlist		*create_list();
 void		my_putstr(char *);
 t_dlist         *remove_elem(t_dlist *, int);
-void		*pa(t_dlist *, t_dlist *);
+void		pa(t_dlist *, t_dlist *);
 t_dlist		*add_end(t_dlist *, int);
 t_dlist		*add_beg(t_dlist *, int);
 void		go_through(t_dlist *);
 void		sa(t_dlist *);
 void		sb(t_dlist *);
 int		my_getnbr(char *);
+void		rra(t_dlist *);
+void		rrb(t_dlist *);
+void		rrr(t_dlist *, t_dlist *);
+void		sc(t_dlist *, t_dlist *);
+void		pb(t_dlist *, t_dlist *);
+t_dlist		*sort(t_dlist *, t_dlist *);
 
-#endif
+#endif /* !MY_H_ */

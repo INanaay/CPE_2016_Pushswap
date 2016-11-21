@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 18:11:21 2016 Nathan Lebon
-** Last update Wed Nov 16 18:23:55 2016 Nathan Lebon
+** Last update Fri Nov 18 12:16:45 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -26,7 +26,7 @@ void	rb(t_dlist *lb)
 
   temp = lb->beg->val;
   remove_elem(lb, 1);
-  add_end(la, temp);
+  add_end(lb, temp);
 }
 
 void	rr(t_dlist *la, t_dlist *lb)

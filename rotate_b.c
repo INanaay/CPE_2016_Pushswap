@@ -5,8 +5,10 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 18:28:05 2016 Nathan Lebon
-** Last update Wed Nov 16 18:41:49 2016 Nathan Lebon
+** Last update Fri Nov 18 12:16:24 2016 Nathan Lebon
 */
+
+#include "my.h"
 
 void	rra(t_dlist *la)
 {
@@ -23,7 +25,7 @@ void	rrb(t_dlist *lb)
 
   temp = lb->end->val;
   remove_elem(lb, lb->len);
-  add_beg(la, temp);
+  add_beg(lb, temp);
 }
 
 void	rrr(t_dlist *la, t_dlist *lb)

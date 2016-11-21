@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Wed Nov 16 16:22:34 2016 Nathan Lebon
+** Last update Mon Nov 21 13:18:52 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -78,6 +78,7 @@ t_dlist		*add_beg(t_dlist *list, int val)
 	  new->next = list->beg;
 	  list->beg = new;
 	}
+      set_index(list);
       list->len = list->len + 1;
     }
   return (list);
