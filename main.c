@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 12:50:03 2016 Nathan Lebon
-** Last update Mon Nov 21 13:16:56 2016 Nathan Lebon
+** Last update Mon Nov 21 15:17:45 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -26,8 +26,6 @@ t_dlist		*ini_list(int ac, char **av)
       i = i + 1;
     }
   sort(la, lb);
-  go_through(lb);
-  go_through(la);
 }
 
 int	main(int ac, char **av)

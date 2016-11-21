@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 11:24:50 2016 Nathan Lebon
-** Last update Mon Nov 21 13:19:04 2016 Nathan Lebon
+** Last update Mon Nov 21 15:10:37 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -56,10 +56,13 @@ void		pa(t_dlist *la, t_dlist *lb)
     {
       add_beg(la, lb->beg->val);
       if (lb->len == 1)
+	{
 	  lb->beg = NULL;
+	  lb->len = lb->len - 1;
+	}
       else
 	remove_elem(lb, 1);
-      go_through(la);
+      set_index(la);
       my_putstr("pa");
     }
 }
