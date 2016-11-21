@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Mon Nov 21 15:00:23 2016 Nathan Lebon
+** Last update Mon Nov 21 15:38:17 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -99,9 +99,5 @@ void		go_through(t_dlist *list)
 	  temp = temp->next;
 	  i = i + 1;
 	}
-    }
-  else if (list->beg == NULL)
-    {
-      my_putstr("empty");
     }
 }

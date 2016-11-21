@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 11:24:50 2016 Nathan Lebon
-** Last update Mon Nov 21 15:10:37 2016 Nathan Lebon
+** Last update Mon Nov 21 15:37:05 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -74,8 +74,8 @@ void		pb(t_dlist *la, t_dlist *lb)
       add_beg(lb, la->beg->val);
       if (la->len == 1)
 	{
-	  my_putchar('n');
 	  la->beg = NULL;
+	  la->len = la->len - 1;
 	}
       else
 	remove_elem(la, 1);
