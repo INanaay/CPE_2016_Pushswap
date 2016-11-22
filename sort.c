@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 18 16:52:25 2016 Nathan Lebon
-** Last update Tue Nov 22 16:13:56 2016 Nathan Lebon
+** Last update Tue Nov 22 17:31:21 2016 Nathan Lebon
 */
 #include <string.h>
 #include "my.h"
@@ -45,7 +45,6 @@ int		is_minor(t_dlist *la)
 
 t_dlist		*sort(t_dlist *la, t_dlist *lb)
 {
-  printf("%i\n", is_minor(la));
   while (is_sorted(la) == 0)
     {
       if (la->beg->val > la->beg->next->val)

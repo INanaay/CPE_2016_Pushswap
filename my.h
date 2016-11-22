@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:05:46 2016 Nathan Lebon
-** Last update Mon Nov 21 10:28:54 2016 Nathan Lebon
+** Last update Tue Nov 22 17:33:42 2016 Nathan Lebon
 */
 
 #ifndef MY_H_
@@ -51,5 +51,7 @@ void		rrr(t_dlist *, t_dlist *);
 void		sc(t_dlist *, t_dlist *);
 void		pb(t_dlist *, t_dlist *);
 t_dlist		*sort(t_dlist *, t_dlist *);
+void		ra(t_dlist *);
+t_dlist		*set_index(t_dlist *);
 
 #endif /* !MY_H_ */
