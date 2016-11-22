@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 12:50:03 2016 Nathan Lebon
-** Last update Mon Nov 21 19:03:10 2016 Nathan Lebon
+** Last update Tue Nov 22 16:01:55 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -25,8 +25,7 @@ t_dlist		*ini_list(int ac, char **av)
       add_end(la, my_getnbr(av[i]));
       i = i + 1;
     }
-  printf("%i", is_minor(la));
-  my_putchar('l');
+  sort(la, lb);
 }
 
 int	main(int ac, char **av)

@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 18 16:52:25 2016 Nathan Lebon
-** Last update Mon Nov 21 19:13:25 2016 Nathan Lebon
+** Last update Tue Nov 22 16:13:56 2016 Nathan Lebon
 */
 #include <string.h>
 #include "my.h"
@@ -36,7 +36,6 @@ int		is_minor(t_dlist *la)
   nb = la->beg->val;
   while (n != NULL)
     {
-      my_putchar('p');
       if (nb > n->val)
 	return (0);
       n = n->next;
@@ -46,15 +45,24 @@ int		is_minor(t_dlist *la)
 
 t_dlist		*sort(t_dlist *la, t_dlist *lb)
 {
+  printf("%i\n", is_minor(la));
   while (is_sorted(la) == 0)
     {
-      if (LA2 > LA1)
-	sa(la);
+      if (la->beg->val > la->beg->next->val)
+	{
+	  sa(la);
+	}
       else if (is_minor(la) == 1)
-	pb(la,lb);
+	{
+	  pb(la, lb);
+	}
       else
-	ra(la);
+	{
+	  ra(la);
+	}
     }
   while (lb->len != 0)
-    pa(la, lb);
+    {
+      pa(la, lb);
+    }
 }
