@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Wed Nov 23 15:53:04 2016 Nathan Lebon
+** Last update Wed Nov 23 16:11:35 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -99,9 +99,12 @@ void		go_through(t_dlist *list)
       temp = list->beg;
       while (i < list->len)
 	{
-	  printf("index=%i, val=%i\n", temp->index, temp->val);
+	  print_int(temp->index);
+	  my_putchar(' ');
+	  print_int(temp->val);
 	  temp = temp->next;
 	  i = i + 1;
+	  my_putchar('\n');
 	}
     }
 }
