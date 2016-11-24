@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 11:24:50 2016 Nathan Lebon
-** Last update Mon Nov 21 15:37:05 2016 Nathan Lebon
+** Last update Thu Nov 24 16:28:10 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -63,7 +63,6 @@ void		pa(t_dlist *la, t_dlist *lb)
       else
 	remove_elem(lb, 1);
       set_index(la);
-      my_putstr("pa");
     }
 }
 
@@ -79,6 +78,5 @@ void		pb(t_dlist *la, t_dlist *lb)
 	}
       else
 	remove_elem(la, 1);
-      my_putstr("pb");
     }
 }
