@@ -5,7 +5,7 @@
 ## Login   <lnanaay@epitech.net>
 ## 
 ## Started on  Sat Oct 15 19:14:21 2016 LEBON Nathan
-## Last update Thu Nov 24 16:11:07 2016 Nathan Lebon
+## Last update Fri Nov 25 11:56:01 2016 Nathan Lebon
 ##
 
 
@@ -21,7 +21,8 @@ SRCS		= index.c	\
 		  operations.c	\
 		  putchar.c	\
 		  sort.c	\
-		  buffer.c
+		  buffer.c	\
+		  flag.c
 
 OBJS		= $(SRCS:.c=.o)
 

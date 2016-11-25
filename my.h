@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:05:46 2016 Nathan Lebon
-** Last update Fri Nov 25 10:30:59 2016 Nathan Lebon
+** Last update Fri Nov 25 12:01:18 2016 Nathan Lebon
 */
 
 #ifndef MY_H_
@@ -41,7 +41,7 @@ t_dlist         *remove_elem(t_dlist *, int);
 void		pa(t_dlist *, t_dlist *);
 t_dlist		*add_end(t_dlist *, int);
 t_dlist		*add_beg(t_dlist *, int);
-void		go_through(t_dlist *);
+void		go_through(t_dlist *, char *);
 void		sa(t_dlist *);
 void		sb(t_dlist *);
 int		my_getnbr(char *);
@@ -50,10 +50,16 @@ void		rrb(t_dlist *);
 void		rrr(t_dlist *, t_dlist *);
 void		sc(t_dlist *, t_dlist *);
 void		pb(t_dlist *, t_dlist *);
-t_dlist		*sort(t_dlist *, t_dlist *);
+t_dlist		*sort(t_dlist *, t_dlist *, int);
 void		ra(t_dlist *);
 t_dlist		*set_index(t_dlist *);
 void		buff(char *, int, char *);
 void		print_int(int);
+t_dlist		*finish_sort_v(t_dlist *, t_dlist *, int, char *);
+t_dlist		*sort_v(t_dlist *, t_dlist *, int, char *);
+t_dlist		*ini_list_v(int, char **);
+int		is_sorted(t_dlist *);
+int		is_minor(t_dlist *);
+int		my_strcmp(char *, char *);
 
 #endif /* !MY_H_ */

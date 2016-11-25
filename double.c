@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Wed Nov 23 16:11:35 2016 Nathan Lebon
+** Last update Fri Nov 25 11:35:29 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -84,12 +84,14 @@ t_dlist		*add_beg(t_dlist *list, int val)
   return (list);
 }
 
-void		go_through(t_dlist *list)
+void		go_through(t_dlist *list, char *name)
 {
   t_node	*temp;
   int		i;
 
   i = 0;
+  my_putstr(name);
+  my_putchar(':');
   if (list->len == 0)
     {
       my_putstr("\\0");
@@ -97,14 +99,14 @@ void		go_through(t_dlist *list)
   else if (list != NULL)
     {
       temp = list->beg;
-      while (i < list->len)
+      while (i < list->len - 1)
 	{
-	  print_int(temp->index);
-	  my_putchar(' ');
 	  print_int(temp->val);
 	  temp = temp->next;
 	  i = i + 1;
-	  my_putchar('\n');
+	  my_putchar(' ');
 	}
+      print_int(temp->val);
     }
+  my_putchar('\n');
 }

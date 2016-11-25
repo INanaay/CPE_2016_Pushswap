@@ -5,11 +5,12 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 18 16:52:25 2016 Nathan Lebon
-** Last update Fri Nov 25 10:33:58 2016 Nathan Lebon
+** Last update Fri Nov 25 11:59:22 2016 Nathan Lebon
 */
 
 #include <unistd.h>
 #include <string.h>
+#include <stdlib.h>
 #include "my.h"
 
 int		is_sorted(t_dlist *la)
@@ -61,14 +62,14 @@ t_dlist		*finish_sort(t_dlist *la, t_dlist *lb, int i, char *s)
   if (b == 1)
     i = i - 3;
   write(1, s, i - 1);
+  free(s);
 }
 
-t_dlist		*sort(t_dlist *la, t_dlist *lb)
+t_dlist		*sort(t_dlist *la, t_dlist *lb, int i)
 {
-  char		s[3000000];
-  int		i;
+  char		*s;
 
-  i = 0;
+  s = malloc(sizeof (char) * (10000000));
   while (is_sorted(la) == 0)
     {
       if (la->beg->val > la->beg->next->val)

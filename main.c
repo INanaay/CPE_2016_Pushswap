@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 12:50:03 2016 Nathan Lebon
-** Last update Fri Nov 25 10:26:38 2016 Nathan Lebon
+** Last update Fri Nov 25 11:54:02 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -14,7 +14,6 @@ t_dlist		*ini_list(int ac, char **av)
 {
   t_dlist	*la;
   t_dlist	*lb;
-
   int		i;
 
   i = 1;
@@ -25,17 +24,23 @@ t_dlist		*ini_list(int ac, char **av)
       add_end(la, my_getnbr(av[i]));
       i = i + 1;
     }
-  sort(la, lb);
+  sort(la, lb, 0);
   my_putchar('\n');
 }
 
 int	main(int ac, char **av)
 {
-
   if (ac < 2)
     {
       my_putstr("temp message");
-      return (0);
     }
-  ini_list(ac, av);
+  else if (my_strcmp(av[1], "-v") == 0)
+    {
+      ini_list_v(ac, av);
+    }
+  else
+    {
+      ini_list(ac, av);
+    }
+  return (0);
 }
