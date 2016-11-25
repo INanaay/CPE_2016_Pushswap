@@ -5,8 +5,10 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 18 16:52:25 2016 Nathan Lebon
-** Last update Thu Nov 24 16:32:13 2016 Nathan Lebon
+** Last update Fri Nov 25 10:33:58 2016 Nathan Lebon
 */
+
+#include <unistd.h>
 #include <string.h>
 #include "my.h"
 
@@ -43,9 +45,27 @@ int		is_minor(t_dlist *la)
   return (1);
 }
 
+t_dlist		*finish_sort(t_dlist *la, t_dlist *lb, int i, char *s)
+{
+  int		b;
+
+  b = 0;
+  if (lb->len > 0)
+    b = 1;
+  while (lb->len != 0)
+    {
+      buff(s, i, "pa");
+      pa(la, lb);
+      i = i + 3;
+    }
+  if (b == 1)
+    i = i - 3;
+  write(1, s, i - 1);
+}
+
 t_dlist		*sort(t_dlist *la, t_dlist *lb)
 {
-  char		s[1000000];
+  char		s[3000000];
   int		i;
 
   i = 0;
@@ -70,11 +90,5 @@ t_dlist		*sort(t_dlist *la, t_dlist *lb)
       buff(s, i, " ");
       i = i + 1;
     }
-  while (lb->len != 0)
-    {
-      buff(s, i, "pa");
-      pa(la, lb);
-      i = i + 3;
-    }
-  write(1, &s, i - 4);
+  finish_sort(la, lb, i, s);
 }
