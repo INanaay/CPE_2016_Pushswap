@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Wed Nov 16 12:50:03 2016 Nathan Lebon
-** Last update Fri Nov 25 11:54:02 2016 Nathan Lebon
+** Last update Sat Nov 26 12:22:06 2016 Nathan Lebon
 */
 
 #include "my.h"
@@ -32,7 +32,8 @@ int	main(int ac, char **av)
 {
   if (ac < 2)
     {
-      my_putstr("temp message");
+      my_putchar('\n');
+      return (0);
     }
   else if (my_strcmp(av[1], "-v") == 0)
     {
