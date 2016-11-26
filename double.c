@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Tue Nov 15 11:10:00 2016 Nathan Lebon
-** Last update Fri Nov 25 11:35:29 2016 Nathan Lebon
+** Last update Sat Nov 26 12:15:13 2016 Nathan Lebon
 */
 
 #include <stdlib.h>
@@ -29,8 +29,8 @@ t_dlist		*create_list()
 
 t_dlist		*add_end(t_dlist *list, int val)
 {
-  t_node *new;
-  
+  t_node	*new;
+
   new = malloc(sizeof(t_node));
   if (new != NULL)
     {
@@ -58,7 +58,7 @@ t_dlist		*add_end(t_dlist *list, int val)
 t_dlist		*add_beg(t_dlist *list, int val)
 {
   t_node	*new;
-  
+
   new = malloc(sizeof(t_node));
   if (new != NULL)
     {
