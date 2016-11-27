@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 25 10:56:23 2016 Nathan Lebon
-** Last update Fri Nov 25 11:59:53 2016 Nathan Lebon
+** Last update Sun Nov 27 13:16:22 2016 Nathan Lebon
 */
 
 #include <unistd.h>
@@ -49,11 +49,11 @@ t_dlist         *finish_sort_v(t_dlist *la, t_dlist *lb, int i, char *s)
       pa(la, lb);
       go_through(la, "la");
       go_through(lb, "lb");
-      i = i + 3;
+      i = i + 2;
+      buff(s, i, " ");
+      i = i + 1;
+      my_putchar('\n');
     }
-  if (b == 1)
-    i = i - 3;
-  my_putchar('\n');
   write(1, s, i - 1);
 }
 
@@ -81,6 +81,7 @@ t_dlist         *sort_v(t_dlist *la, t_dlist *lb, int i, char *s)
       i = i + 2;
       buff(s, i, " ");
       i = i + 1;
+      my_putchar('\n');
     }
   finish_sort_v(la, lb, i, s);
 }
