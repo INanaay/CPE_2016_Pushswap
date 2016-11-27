@@ -5,7 +5,7 @@
 ** Login   <lnanaay@epitech.net>
 ** 
 ** Started on  Fri Nov 18 16:52:25 2016 Nathan Lebon
-** Last update Fri Nov 25 11:59:22 2016 Nathan Lebon
+** Last update Sun Nov 27 13:10:59 2016 Nathan Lebon
 */
 
 #include <unistd.h>
@@ -57,10 +57,10 @@ t_dlist		*finish_sort(t_dlist *la, t_dlist *lb, int i, char *s)
     {
       buff(s, i, "pa");
       pa(la, lb);
-      i = i + 3;
+      i = i + 2;
+      buff(s, i, " ");
+      i = i + 1;
     }
-  if (b == 1)
-    i = i - 3;
   write(1, s, i - 1);
   free(s);
 }
